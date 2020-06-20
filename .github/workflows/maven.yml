@@ -20,5 +20,9 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
+    - name: OkHttp
+      uses: actions/upload-artifact@v2
+      with:
+        okhttp: 2.7.5
     - name: Build with Maven
       run: mvn -B package --file pom.xml
